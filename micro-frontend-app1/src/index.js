@@ -4,8 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
+import './public-path';
 
 const render = (container) => {
   const root = container ? ReactDOM.createRoot(container.querySelector('#root')) : ReactDOM.createRoot(document.getElementById('root'));
@@ -22,6 +21,10 @@ const render = (container) => {
   // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
   reportWebVitals();
 };
+
+if (!window.__POWERED_BY_QIANKUN__) {
+  render();
+}
 
 /**
  * bootstrap 只会在微应用初始化的时候调用一次，下次微应用重新进入时会直接调用 mount 钩子，不会再重复触发 bootstrap。
