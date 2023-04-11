@@ -1,9 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { registerMicroApps, start } from 'qiankun';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+registerMicroApps([
+  {
+    name: 'react app1', // app name registered
+    entry: '//localhost:3001',
+    container: '#sub-app',
+    activeRule: '/app1',
+  },
+]);
+
+start();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

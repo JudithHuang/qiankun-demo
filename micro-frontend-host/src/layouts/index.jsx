@@ -21,6 +21,7 @@ function Layout() {
 
       <hr />
       <Outlet />
+      <div id="sub-app" />
     </div>
   );
 }
