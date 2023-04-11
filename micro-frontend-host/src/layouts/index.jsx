@@ -8,19 +8,17 @@ function Layout() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/app1/home">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
+            <Link to="/app1/about">About</Link>
           </li>
         </ul>
       </nav>
 
       <hr />
       <Outlet />
+      这部分是子应用
       <div id="sub-app" />
     </div>
   );
